@@ -252,57 +252,46 @@ h6,
 .blog-item:hover img {
     transform: scale(1.1);
 }
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0;
+.play-button {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .video-wrapper {
+    display: flex;
+    justify-content: center; /* horizontally center the container */
+    align-items: center; /* vertically center the container */
+    margin: 0 auto; /* center the container horizontally */
+    max-width: 1200px; /* set a maximum width for the container */
   }
   
-  .video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .video-container {
+    margin: 0 20px; /* add some horizontal spacing between the videos */
+    padding: 20px; /* add some padding around the videos */
+    max-width: 100%; /* make sure the videos don't exceed the container width */
+  }
+  
+  video {
+    display: block; /* remove default spacing below the video element */
     width: 100%;
-    height: 100%;
+    height: auto; /* maintain aspect ratio of the video */
   }
   
   .play {
-    position: absolute;
+    position: absolute; /* position the play/pause button on top of the video */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: none;
-    background-color: transparent;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    color: white;
-    font-size: 24px;
-    line-height: 60px;
-    text-align: center;
-    z-index: 1;
+    z-index: 1; /* make sure the button is on top of the video */
   }
   
-  .play:before {
-    content: "\f04b";
-    font-family: "FontAwesome";
-  }
   
-  .pause:before {
-    content: "\f04c";
-  }
-  
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-image: none;
-    color: black;
-  }
-  
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 5%;
-  }
-  
+
+    
 
     
