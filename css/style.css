@@ -289,7 +289,11 @@ h6,
     transform: translate(-50%, -50%);
     z-index: 1; /* make sure the button is on top of the video */
   }
-  
+  @media screen and (max-width: 767px) {
+    .video-wrapper {
+      flex-direction: column;
+    }
+  }  
   
 
     
